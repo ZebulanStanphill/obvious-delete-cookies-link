@@ -25,10 +25,10 @@ class browser_docs
 	 */
 	protected const BROWSER_PATTERNS = [
 		'samsung'	=> '#\(KHTML, like Gecko\) SamsungBrowser/[\d.]+ Chrome/[\d.]+ (?:Mobile )?Safari/[\d.]+$#',
-		'edge'		=> '#\bEdg(?:A)?/[\d.]+$|\(KHTML, like Gecko\) Version/[\d.]+ EdgiOS/[\d.]+(?: Mobile/\w+)? Safari/[\d.]+$#',
-		'opera'		=> '#\bOPR/[\d.]+$#',
+		'edge'		=> '#\bEdg(?:A|iOS)?/[\d.]+$|\(KHTML, like Gecko\) Version/[\d.]+ EdgiOS/[\d.]+(?: Mobile/\w+)? Safari/[\d.]+$#',
+		'opera'		=> '#\bOPR/[\d.]+(?: \(Edition [^()]*\))?$#',
 		'firefox'	=> '#\bGecko/[\d.]+ Firefox/[\d.]+$|\(KHTML, like Gecko\) FxiOS/[\d.]+(?: Mobile/\w+)? Safari/[\d.]+$#',
-		'chrome'	=> '#\(KHTML, like Gecko\) Chrome/[\d.]+ (?:Mobile )?Safari/[\d.]+$|\(KHTML, like Gecko\) CriOS/[\d.]+(?: Mobile/\w+)? Safari/[\d.]+$#',
+		'chrome'	=> '#\(KHTML, like Gecko\) Chrome/[\d.]+ (?:Mobile )?Safari/[\d.]+$|\(KHTML, like Gecko\) CriOS/[\d.]+(?: Version/[\d.]+)?(?: Mobile/\w+)? Safari/[\d.]+$#',
 		'safari'	=> '#\(KHTML, like Gecko\) Version/[\d.]+(?: Mobile/\w+)? Safari/[\d.]+$#',
 	];
 

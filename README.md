@@ -33,9 +33,11 @@ language:
 Edge on Android and iOS and Opera on Android have no such instructions, so
 they get no link, like in-app browsers (such as Facebook's or Instagram's) and
 other browsers. Browsers that send exactly Chrome's User-Agent, such as Brave,
-Vivaldi and Arc, get Chrome's instructions. Safari on an iPad asks for desktop
-sites by default, with the same User-Agent as Safari on a Mac, so it gets the
-Mac instructions, which link to the iPad version.
+Vivaldi and Arc, get Chrome's instructions. Safari on an iPad and Chrome on a
+large Android tablet ask for desktop sites by default, with the same User-Agent
+as on a computer, so they get the instructions for computers. Apple's
+instructions link to the iPad version, and Google's have tabs for the other
+platforms.
 
 ## Requirements
 
