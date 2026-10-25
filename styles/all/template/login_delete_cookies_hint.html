@@ -1,0 +1,14 @@
+{% if not S_IS_BOT %}
+	<div class="content">
+		<fieldset class="{% if S_CONFIRM_CODE %}fields2{% else %}fields1{% endif %}">
+			<dl>
+				<dt>&nbsp;</dt>
+				<dd>{{ lang('OBVIOUSDELETECOOKIESLINK_LOGIN_HINT', '<a href="' ~ U_DELETE_COOKIES ~ '" data-ajax="true" data-refresh="true">', '</a>') }}</dd>
+			</dl>
+		</fieldset>
+	</div>
+{% endif %}
+
+{% if OBVIOUSDELETECOOKIESLINK_PROVIDER_TEMPLATE_FILE %}
+	{% include OBVIOUSDELETECOOKIESLINK_PROVIDER_TEMPLATE_FILE %}
+{% endif %}

@@ -1,0 +1,9 @@
+services:
+    zebulanstanphill.obviousdeletecookieslink.listener:
+        class: zebulanstanphill\obviousdeletecookieslink\event\main_listener
+        arguments:
+            - '@language'
+            - '@template'
+            - '@template.twig.loader'
+        tags:
+            - { name: event.listener }
