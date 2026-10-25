@@ -4,7 +4,7 @@
  * Obvious Delete Cookies Link. An extension for the phpBB Forum Software package.
  *
  * @copyright (c) 2026, Zebulan Stanphill
- * @license GNU General Public License, version 2 (GPL-2.0-only)
+ * @license GNU General Public License, version 2 or later (GPL-2.0-or-later)
  *
  */
 

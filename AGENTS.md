@@ -105,7 +105,9 @@ Test on throwaway boards, never on a real one:
   `master` and `epv-phpbb4` branches) on a copy laid out as
   `zebulanstanphill/obviousdeletecookieslink/`, and
   [PHPCompatibility](https://github.com/PHPCompatibility/PHPCompatibility) with
-  `--runtime-set testVersion 7.1-`.
+  `--runtime-set testVersion 7.1-`. EPV reports one expected error: the
+  extension is licensed `GPL-2.0-or-later`, and EPV only accepts
+  `GPL-2.0-only`, the license that phpBB's extension database requires.
 - The user works on this computer while agents test, so use headless
   browsers only, and don't install browsers or other software for testing.
   Google Chrome isn't installed; Playwright's cached Chrome for Testing in

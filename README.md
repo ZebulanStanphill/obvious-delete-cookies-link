@@ -74,6 +74,7 @@ Only English is included. To add a language, copy `language/en/` to
 
 ## License
 
-[GNU General Public License, version 2](license.txt)
+[GNU General Public License, version 2](license.txt) or (at your option) any
+later version (`GPL-2.0-or-later`).
 
 Created in [T3 Code](https://t3.codes).
