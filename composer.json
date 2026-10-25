@@ -1,8 +1,8 @@
 {
 	"name": "zebulanstanphill/obviousdeletecookieslink",
 	"type": "phpbb-extension",
-	"description": "Adds a hint with the standard delete-cookies link below the Login button on the login form.",
-	"version": "1.0.0",
+	"description": "Adds a hint below the Login button on the login form, with the standard delete-cookies link and a link to the browser's instructions for clearing its cache and cookies.",
+	"version": "1.1.0",
 	"time": "2026-10-25",
 	"keywords": ["phpbb", "extension", "login", "cookies"],
 	"license": "GPL-2.0-only",

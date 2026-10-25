@@ -3,7 +3,11 @@
 		<fieldset class="{% if S_CONFIRM_CODE %}fields2{% else %}fields1{% endif %}">
 			<dl>
 				<dt>&nbsp;</dt>
-				<dd>{{ lang('OBVIOUSDELETECOOKIESLINK_LOGIN_HINT', '<a href="' ~ U_DELETE_COOKIES ~ '" data-ajax="true" data-refresh="true">', '</a>') }}</dd>
+				<dd>{{ lang('OBVIOUSDELETECOOKIESLINK_LOGIN_HINT',
+					'<a href="' ~ U_DELETE_COOKIES ~ '" data-ajax="true" data-refresh="true">', '</a>',
+					OBVIOUSDELETECOOKIESLINK_U_CLEAR_BROWSER_DATA ? '<a href="' ~ OBVIOUSDELETECOOKIESLINK_U_CLEAR_BROWSER_DATA ~ '" target="_blank" rel="noopener noreferrer">' : '',
+					OBVIOUSDELETECOOKIESLINK_U_CLEAR_BROWSER_DATA ? '</a>' : ''
+				) }}</dd>
 			</dl>
 		</fieldset>
 	</div>

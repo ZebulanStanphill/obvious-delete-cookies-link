@@ -19,17 +19,25 @@ class main_listener implements EventSubscriberInterface
 	/** @var \phpbb\language\language */
 	protected $language;
 
+	/** @var \phpbb\request\request_interface */
+	protected $request;
+
 	/** @var \phpbb\template\template */
 	protected $template;
 
 	/** @var \Twig\Loader\LoaderInterface */
 	protected $twig_loader;
 
-	public function __construct(\phpbb\language\language $language, \phpbb\template\template $template, \Twig\Loader\LoaderInterface $twig_loader)
+	/** @var \zebulanstanphill\obviousdeletecookieslink\helper\browser_docs */
+	protected $browser_docs;
+
+	public function __construct(\phpbb\language\language $language, \phpbb\request\request_interface $request, \phpbb\template\template $template, \Twig\Loader\LoaderInterface $twig_loader, \zebulanstanphill\obviousdeletecookieslink\helper\browser_docs $browser_docs)
 	{
 		$this->language = $language;
+		$this->request = $request;
 		$this->template = $template;
 		$this->twig_loader = $twig_loader;
+		$this->browser_docs = $browser_docs;
 	}
 
 	public static function getSubscribedEvents(): array
@@ -64,6 +72,9 @@ class main_listener implements EventSubscriberInterface
 
 		$template_data['OBVIOUSDELETECOOKIESLINK_PROVIDER_TEMPLATE_FILE'] = $provider_template_file;
 		$template_data['PROVIDER_TEMPLATE_FILE'] = self::HINT_TEMPLATE;
+
+		$clear_data_url = $this->browser_docs->get_clear_data_url($this->request->header('User-Agent'));
+		$template_data['OBVIOUSDELETECOOKIESLINK_U_CLEAR_BROWSER_DATA'] = utf8_htmlspecialchars($clear_data_url);
 
 		$event['login_box_template_data'] = $template_data;
 	}

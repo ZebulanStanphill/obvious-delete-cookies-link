@@ -4,11 +4,38 @@
 
 A phpBB extension that adds a hint below the Login button on the login form:
 
-> Having trouble logging in? Try <u>deleting cookies</u> before logging in again.
+> Having trouble logging in? Try <u>deleting site cookies</u> before logging in
+> again. If this still doesn’t work, try <u>clearing all browser cache &
+> cookies</u>.
 
-"deleting cookies" is the board's standard delete cookies link, the same one as
-in the footer: it asks for confirmation, deletes the board's cookies and
-returns to the board index.
+- "deleting site cookies" is the board's standard delete cookies link, the same
+  one as in the footer: it asks for confirmation, deletes the board's cookies
+  and returns to the board index.
+- "clearing all browser cache & cookies" links to the official instructions for
+  the visitor's browser, which open in a new tab. If the browser isn't
+  recognised, it's plain text.
+
+## Browsers with instructions
+
+The browser and platform are recognised from the browser's User-Agent. The
+instructions are the vendors' own, and most of them are shown in the reader's
+language:
+
+| Browser          | Platforms                                        | Instructions |
+| ---------------- | ------------------------------------------------ | ------------ |
+| Chrome           | Windows, macOS, Linux, ChromeOS, Android, iOS     | [Google](https://support.google.com/accounts/answer/32050) |
+| Edge             | Windows, macOS, Linux                            | [Microsoft](https://support.microsoft.com/edge/view-and-delete-browser-history-in-microsoft-edge) |
+| Firefox          | Windows, macOS, Linux, Android, iOS               | [Mozilla](https://support.mozilla.org/kb/clear-cookies-and-site-data-firefox) |
+| Opera            | Windows, macOS, Linux                            | [Opera](https://help.opera.com/latest/security-and-privacy/#clearBrowsingData) |
+| Safari           | macOS, iPhone, iPad                              | [Apple](https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac) |
+| Samsung Internet | Android                                          | [Samsung](https://www.samsung.com/us/support/answer/ANS10010562/) (English only) |
+
+Edge on Android and iOS and Opera on Android have no such instructions, so
+they get no link, like in-app browsers (such as Facebook's or Instagram's) and
+other browsers. Browsers that send exactly Chrome's User-Agent, such as Brave,
+Vivaldi and Arc, get Chrome's instructions. Safari on an iPad asks for desktop
+sites by default, with the same User-Agent as Safari on a Mac, so it gets the
+Mac instructions, which link to the iPad version.
 
 ## Requirements
 

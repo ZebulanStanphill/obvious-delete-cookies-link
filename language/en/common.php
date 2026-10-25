@@ -38,6 +38,8 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, [
-	// %1$s and %2$s are the opening and closing tags of the delete cookies link.
-	'OBVIOUSDELETECOOKIESLINK_LOGIN_HINT'	=> 'Having trouble logging in? Try %1$sdeleting cookies%2$s before logging in again.',
+	// %1$s and %2$s wrap the link that deletes the board's cookies. %3$s and %4$s
+	// wrap the link to the browser's instructions for clearing its cache and
+	// cookies; they are empty when the browser isn't recognised.
+	'OBVIOUSDELETECOOKIESLINK_LOGIN_HINT'	=> 'Having trouble logging in? Try %1$sdeleting site cookies%2$s before logging in again. If this still doesn’t work, try %3$sclearing all browser cache &amp; cookies%4$s.',
 ]);
